@@ -4,6 +4,12 @@ mongoose = require('mongoose'),
 autoIncrement = require('..'),
 connection;
 
+try {
+  mongoose.Promise = require('bluebird');
+} catch (e) {
+  mongoose.Promise = Promise;
+}
+
 before(function (done) {
   connection = mongoose.createConnection('mongodb://127.0.0.1/mongoose-auto-increment-test');
   connection.on('error', console.error.bind(console));

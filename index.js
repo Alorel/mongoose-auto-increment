@@ -4,6 +4,12 @@ extend = require('extend'),
 counterSchema,
 IdentityCounter;
 
+try {
+  mongoose.Promise = require('bluebird');
+} catch (e) {
+  mongoose.Promise = Promise;
+}
+
 // Initialize plugin by creating counter collection in database.
 exports.initialize = function (connection) {
   try {
