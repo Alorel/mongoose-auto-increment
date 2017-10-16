@@ -1,10 +1,11 @@
+# Distributor's note
+
+This is a clone of [mongoose-auto-increment](https://www.npmjs.com/package/mongoose-auto-increment) updated to work
+with the latest versions of Mongoose.
+
 # mongoose-auto-increment
 
-[![Build Status](https://travis-ci.org/codetunnel/mongoose-auto-increment.png?branch=master)](https://travis-ci.org/codetunnel/mongoose-auto-increment)
-[![Dependencies Status](https://gemnasium.com/codetunnel/mongoose-auto-increment.png)](https://gemnasium.com/codetunnel/mongoose-auto-increment)
-[![NPM version](https://badge.fury.io/js/mongoose-auto-increment.png)](http://badge.fury.io/js/mongoose-auto-increment)
-
-> Mongoose plugin that auto-increments any ID field on your schema every time a document is saved.
+Mongoose plugin that auto-increments any ID field on your schema every time a document is saved.
 
 ---
 
@@ -12,7 +13,7 @@
 
 ## Getting Started
 
-> npm install mongoose-auto-increment
+> npm install @alorel-github-mirrors/mongoose-auto-increment
 
 Once you have the plugin installed it is very simple to use. Just get reference to it, initialize it by passing in your
 mongoose connection and pass `autoIncrement.plugin` to the `plugin()` function on your schema.
@@ -22,7 +23,7 @@ mongoose connection and pass `autoIncrement.plugin` to the `plugin()` function o
 ````js
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    autoIncrement = require('mongoose-auto-increment');
+    autoIncrement = require('@alorel-github-mirrors/mongoose-auto-increment');
 
 var connection = mongoose.createConnection("mongodb://localhost/myDatabase");
 
